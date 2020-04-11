@@ -53,6 +53,11 @@
         <groupId>com.heroku.sdk</groupId>
         <artifactId>heroku-maven-plugin</artifactId>
         <version>3.0.2</version>
+        <configuration>
+  <processTypes>
+     <web>java $JAVA_OPTS -jar target/${project.artifactId}-${project.version}.jar com.essential.EssentialApplication</web>
+  </processTypes>
+</configuration>
       </plugin>
 		</plugins>
 	</build>
